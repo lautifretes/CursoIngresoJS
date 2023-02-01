@@ -11,5 +11,5 @@ function mostrarAumento()
  let resultado = aumento
 	
  document.getElementById("txtIdResultado").value = resultado
- 
+
 }
