@@ -13,7 +13,7 @@ function sumar()
 
 	numUno = parseInt(document.getElementById("txtIdNumeroUno").value);
 	numDos = parseInt(document.getElementById("txtIdNumeroDos").value);
-	resultado = parseInt(numUno + numDos);
+	resultado = numUno + numDos;
 	mensaje = "La suma es " +resultado; 
 	
 
@@ -31,7 +31,7 @@ function restar()
 
 	numUno = parseInt(document.getElementById("txtIdNumeroUno").value);
 	numDos = parseInt(document.getElementById("txtIdNumeroDos").value);
-	resultado = parseInt(numUno - numDos);
+	resultado = numUno - numDos;
 	mensaje = "La resta es " +resultado; 
 	
 	alert(mensaje);	
