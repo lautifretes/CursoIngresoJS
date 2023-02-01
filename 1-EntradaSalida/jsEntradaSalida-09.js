@@ -8,7 +8,7 @@ function mostrarAumento()
 {
  let sueldo    = parseInt(document.getElementById("txtIdSueldo").value)
  let aumento   = sueldo*1.10;
- let resultado = aumento
+ let resultado = aumento;
 	
  document.getElementById("txtIdResultado").value = resultado
 
