@@ -15,7 +15,7 @@ function Sumar() {
     precioProductoDos = parseInt(document.getElementById("txtIdPrecioDos").value);
     precioProcutoTres = parseInt(document.getElementById("txtIdPrecioTres").value);
     //  mensaje = "la suma de los productos es " + (precioProductoUno + precioProductoDos + precioProcutoTres)
-    alert("la suma es " + (precioProductoUno + precioProductoDos + precioProcutoTres));
+    console.log("la suma total es " + (precioProductoUno + precioProductoDos + precioProcutoTres));
 
 
 
@@ -30,8 +30,8 @@ function Promedio() {
     precioProductoUno = parseInt(document.getElementById("txtIdPrecioUno").value);
     precioProductoDos = parseInt(document.getElementById("txtIdPrecioDos").value);
     precioProcutoTres = parseInt(document.getElementById("txtIdPrecioTres").value);
-    promedio = (precioProductoUno+precioProductoDos+precioProcutoTres) /3;
-    alert("El promedio es " + promedio)
+    promedio = (precioProductoUno + precioProductoDos + precioProcutoTres) /3;
+    console.log("El promedio es " + promedio)
 
 }
 function PrecioFinal() {
@@ -44,7 +44,7 @@ function PrecioFinal() {
     precioProductoDos = parseInt(document.getElementById("txtIdPrecioDos").value);
     precioProcutoTres = parseInt(document.getElementById("txtIdPrecioTres").value);
     precioFinal = (precioProductoUno + precioProductoDos + precioProcutoTres)*1.21;
-    alert ("el precio final es " + precioFinal)
+    console.log("el precio final es " + precioFinal)
     
 
 }
