@@ -33,7 +33,7 @@ Pueden utilizar el html del ejercicio 3 para resolverlo. */
 	let mensaje;
 	
 	producto 	= prompt("ingrese el nombre del poducto");
-	precio 		= parseInt(document.getElementById(txtIdNombre).value);
+	precio 		= parseInt(document.getElementById("txtIdNombre").value);
 	porcentaje 	= 30;
 	precioFinal = precio + precio*porcentaje/100;
 	mensaje = "el precio final del producto " +producto +" es "+ precioFinal;
