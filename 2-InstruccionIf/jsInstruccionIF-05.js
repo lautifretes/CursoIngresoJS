@@ -1,6 +1,25 @@
+
+/*      LAUTARO FRETES    */
+
+
+/* Enunciado:
+Al ingresar una edad solo debemos informar si la persona NO es adolescente. */
+
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
+	let edad;
+	let mensaje;
 
+	edad = parseInt(document.getElementById("txtIdEdad").value);
+	mensaje = "no sos un adolescente"
+
+	if(edad < 13 || edad > 17 ){
+
+		alert(mensaje)
+	}
+
+
+
+
+	
 }//FIN DE LA FUNCIÓN
