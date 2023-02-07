@@ -1,7 +1,25 @@
+
+/*    LAUTARO FRETES    */
+
+
+
+/* Enunciado:
+Al ingresar una edad debemos informar si la persona es adolescente, edad entre 13 y 17 años (inclusive) . */
+
+
+
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
+	let edad;
+	let mensaje;
+	
+	edad = parseInt(document.getElementById("txtIdEdad").value)
+	mensaje = "sos un adolescente"
 
+	if(edad >= 13 && edad <= 17){
+		
+		alert(mensaje)
+
+	}
 
 }//FIN DE LA FUNCIÓN
