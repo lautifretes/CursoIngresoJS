@@ -7,14 +7,14 @@ ej.: "El resto es 0 ."*/
 /*cuando se unsa % , * , / no hace falta parentesis 
  ej: let resto = parseInt(dividendo % divisor); */
 function SacarResto()
-/* {
+{
 		
 	let dividendo = parseInt(document.getElementById("txtIdNumeroDividendo").value);
 	let divisor = parseInt(document.getElementById("txtIdNumeroDivisor").value);
 	 let resto = dividendo % divisor
 	alert("el resto es " +resto);
 }
- */
+
 
 
 /* Ejercicio 8.bis: Ingresar dos numeros por id
@@ -25,7 +25,7 @@ b) El promedio de los numeros
 c) El resto de los numeros (el primero en modulo del segundo) 
  */
 
-{
+/* {
 	let numUno;
 	let numDos;
 	let cantNum;
@@ -51,3 +51,4 @@ c) El resto de los numeros (el primero en modulo del segundo)
 
 
 }
+ */
