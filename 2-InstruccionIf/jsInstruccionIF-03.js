@@ -10,19 +10,19 @@ function mostrar()
 {
 	let edad;
 	let mensaje;
-	let mensajeUno;
+	
 
 	edad = parseInt(document.getElementById("txtIdEdad").value);
-	mensaje = "sos mayor de edad"
-	mensajeUno = "sos menor de edad"
-
+	
 	if (edad >= 18) {
 		
-		alert(mensaje)
-
+		mensaje = "sos mayor de edad"
+	
+		
 	}else{
-		alert(mensajeUno)
+		mensaje = "sos menor de edad"
 	}
 	
+	alert(mensaje)
 
 }//FIN DE LA FUNCIÓN

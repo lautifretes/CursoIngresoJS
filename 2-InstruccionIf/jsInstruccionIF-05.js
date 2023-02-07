@@ -11,7 +11,7 @@ function mostrar()
 	let mensaje;
 
 	edad = parseInt(document.getElementById("txtIdEdad").value);
-	mensaje = "no sos un adolescente"
+	mensaje = "no sos adolescente"
 
 	if(edad < 13 || edad > 17 ){
 
