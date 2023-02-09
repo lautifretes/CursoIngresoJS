@@ -1,3 +1,9 @@
+
+//              LAUTARO FRETES
+
+
+
+
 /*4.	Para el departamento de iluminación:
 Tomando en cuenta que todas las lámparas están en oferta al mismo precio de $35 pesos final.
 A.	Si compra 6 o más  lamparitas bajo consumo tiene un descuento del 50%. 
@@ -56,7 +62,7 @@ function CalcularPrecio ()
         document.getElementById("txtIdprecioDescuento").value = "el precio con descuento es " + precioTotal
         
     }else{
-        cantidad == 4 || marca != ("ArgentinaLuz" && "FelipeLamparas")
+        cantidad == 4 && marca != ("ArgentinaLuz" && "FelipeLamparas")
         precioTotal = total - total * 0.20
         document.getElementById("txtIdprecioDescuento").value = "el precio con descuento es " + precioTotal
     }
