@@ -38,20 +38,21 @@ function CalcularPrecio ()
                 // EJERCICIO A.
 
     if (cantidad > 5) {
-        precioTotal = total * descuento
+        
         document.getElementById("txtIdprecioDescuento").value = "el precio con descuento es " + precioTotal
         
     }else {
-        total = precio * cantidad
+        
         document.getElementById("txtIdprecioDescuento").value = "el precio es " + total
     }
                 //  EJERCICIO B.
 
-    if (cantidad == 5 && marca == "ArgentinaLuz") {
+    if (cantidad == 5) {
+        if (marca == "ArgentinaLuz")
         precioTotal = total - total * 0.40
         document.getElementById("txtIdprecioDescuento").value = "el precio con descuento es " + precioTotal
     
-    }else if (cantidad == 5 && marca != "ArgentinaLuz") {
+    }else if (marca != "ArgentinaLuz") {
         precioTotal = total - total * 0.30
         document.getElementById("txtIdprecioDescuento").value = "el precio con descuento es " + precioTotal
     }
