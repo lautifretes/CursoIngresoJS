@@ -6,11 +6,11 @@ Al ingresar una edad que sea igual a 15, mostrar el mensaje "niña bonita". */
 
 
 
-function mostrar()
+//function mostrar()
 {
 
 
-	let edad;
+	/* let edad;
 	let mensaje;
 
 	edad = parseInt(document.getElementById("txtIdEdad").value); 
@@ -20,7 +20,7 @@ function mostrar()
 		alert(mensaje)
 
 	}
-	
+	 */
 
 }//FIN DE LA FUNCIÓN
 
@@ -48,3 +48,48 @@ function mostrar()
 	y logica                                o logica         negacion
 	*/
 
+
+	/* Ejercicio 1bis: 
+/con if
+pedir a una persona que fue de vaciones , 
+la distancia que viajo y el tiempo que tardo, para calcular la velocidad
+e informar:
+60 km/hr = muy lento 
+hata 80km/h= lento 
+hasta 100= buen ritmo
+hasta 120= ahi de la ley 
+mas = eso no se hace/ */
+
+function mostrar()
+{
+	let distancia;
+	let tiempo;
+	let velocidad;
+
+	distancia = parseInt(prompt("ingresar los kilometros recorridos")); 
+	tiempo = parseInt(prompt("ingrese el tiempo de viaje")); 
+	 
+	velocidad = distancia * tiempo 
+	
+	if (velocidad > 120) {
+		mensaje = velocidad + "km/h eso no se hace"
+			 alert(mensaje)
+		
+	} else if (velocidad > 100){
+		mensaje = velocidad + "km/h ahi de la ley"
+			 alert(mensaje)
+
+	} if (velocidad  > 80 ) {
+		mensaje = velocidad + "km/h buen ritmo"
+			 alert(mensaje)
+	}
+	if (velocidad > 79){
+		mensaje = velocidad + "km/h lento"
+			 alert(mensaje)
+	}else{
+		mensaje = velocidad + "km/h muy lento"
+			 alert(mensaje)
+	}
+
+	// alert(mensaje)
+}

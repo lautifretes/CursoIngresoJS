@@ -13,6 +13,7 @@ function mostrar()
 	let numero;
 	let mensaje;
 
+	//Genero el número RANDOM entre 1 y 10 
 	numero = Math.ceil(Math.random()*10)
 
 
@@ -32,7 +33,6 @@ function mostrar()
 	console.log(mensaje)
 
 
-	//Genero el número RANDOM entre 1 y 10 
 	//alert(mensaje);
 
 }//FIN DE LA FUNCIÓN
