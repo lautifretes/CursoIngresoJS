@@ -60,7 +60,7 @@ hasta 100= buen ritmo
 hasta 120= ahi de la ley 
 mas = eso no se hace/ */
 
-/* function mostrar()
+function mostrar()
 {
 	let distancia;
 	let tiempo;
@@ -73,29 +73,29 @@ mas = eso no se hace/ */
 	
 	if (velocidad > 120) {
 		mensaje = velocidad + "km/h eso no se hace";
-		 alert(mensaje);
+		// alert(mensaje);
 		
 	}else if (velocidad > 100){
 		mensaje = velocidad + "km/h ahi de la ley";
-		 alert(mensaje);
+		// alert(mensaje);
 
 	}else if (velocidad  > 80 ) {
 		mensaje = velocidad + "km/h buen ritmo";
-		 alert(mensaje);
+		 //alert(mensaje);
 			 
 	
 	}else if (velocidad > 60){
 		mensaje = velocidad + "km/h lento";
-		 alert(mensaje);
+		// alert(mensaje);
 			 
 	}else{
 		mensaje = velocidad + "km/h muy lento";
-		 alert(mensaje);
+		// alert(mensaje);
 			 
 	}
-	
+	alert(mensaje);
 }
- */
+
 
 
 
@@ -113,7 +113,7 @@ Obesidad II 30-34.9
 Obesidad III >40 */
 
 // formula para IMC = PESO dividido (altura*altura) 
-function mostrar()
+/* function mostrar()
 {
 	let nombre;
 	let altura;
@@ -154,3 +154,4 @@ function mostrar()
 	alert(mensaje)
 }
 
+ */
