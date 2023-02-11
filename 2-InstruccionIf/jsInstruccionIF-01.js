@@ -68,28 +68,30 @@ function mostrar()
 
 	distancia = parseInt(prompt("ingresar los kilometros recorridos")); 
 	tiempo = parseInt(prompt("ingrese el tiempo de viaje")); 
+	velocidad = Math.floor(distancia / tiempo);
 	 
-	velocidad = distancia * tiempo 
 	
 	if (velocidad > 120) {
-		mensaje = velocidad + "km/h eso no se hace"
-			 alert(mensaje)
+		mensaje = velocidad + "km/h eso no se hace";
+		 alert(mensaje);
 		
-	} else if (velocidad > 100){
-		mensaje = velocidad + "km/h ahi de la ley"
-			 alert(mensaje)
+	}else if (velocidad > 100){
+		mensaje = velocidad + "km/h ahi de la ley";
+		 alert(mensaje);
 
-	} if (velocidad  > 80 ) {
-		mensaje = velocidad + "km/h buen ritmo"
-			 alert(mensaje)
-	}
-	if (velocidad > 79){
-		mensaje = velocidad + "km/h lento"
-			 alert(mensaje)
+	}else if (velocidad  > 80 ) {
+		mensaje = velocidad + "km/h buen ritmo";
+		 alert(mensaje);
+			 
+	
+	}else if (velocidad > 60){
+		mensaje = velocidad + "km/h lento";
+		 alert(mensaje);
+			 
 	}else{
-		mensaje = velocidad + "km/h muy lento"
-			 alert(mensaje)
+		mensaje = velocidad + "km/h muy lento";
+		 alert(mensaje);
+			 
 	}
-
-	// alert(mensaje)
+	
 }
