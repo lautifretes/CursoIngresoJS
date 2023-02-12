@@ -14,7 +14,7 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */   
-//  TODO IF 
+//                     TODO IF 
 //function CalcularPrecio () 
 /* {
     let cantidadLamparas;
@@ -94,7 +94,7 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 
 //                                   LAUTARO FRETES
 
-//  TODO SWITCH
+//                     TODO SWITCH
 
 /*  function CalcularPrecio () {
 
@@ -156,7 +156,7 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
             break;
     }
     
-    total = precioBruto + precioBruto * porcentaje/100; //105
+    total = precioBruto + precioBruto * porcentaje/100; 
 
     switch(total){
         case 105:
@@ -175,9 +175,9 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 
  } */
 
-//  SWITCH (las marcas), IF(cantidad)
+//                     SWITCH (las marcas), IF(cantidad)
     
- function CalcularPrecio (){
+ /* function CalcularPrecio (){
     let cantidadLamparas;
     let precio;
     let porcentaje;
@@ -272,5 +272,94 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
     
         console.log(mensaje);
     }
-
+ */
  
+
+//                     Con switch(cantidad) y if (marca)
+
+    function CalcularPrecio (){
+
+     let cantidadLamparas;
+     let precio;
+     let porcentaje;
+     let marca;
+     let precioBruto;
+     let iibb;
+     let total;
+     let mensaje; 
+
+     cantidadLamparas = parseInt(document.getElementById("txtIdCantidad").value);
+     precio           = 35;
+     marca            = document.getElementById("Marca").value;
+     porcentaje       = 0;
+     precioBruto      = cantidadLamparas * precio ;
+
+        switch (cantidadLamparas) {
+            case 6:
+            porcentaje = -50
+            break;
+
+            case 5: 
+            if (marca != "ArgentinaLuz") {
+                porcentaje = -30
+                }else{
+                porcentaje = -40
+            }
+            break;
+
+            case 4:
+            if (marca == "ArgentinaLuz" || marca == "FelipeLamparas") {
+                porcentaje = -25
+                 }else{
+                porcentaje = -20
+            }
+            break;
+
+            case 3:
+            if(marca == "ArgentinaLuz"){
+                porcentaje = -15
+                }else{
+                    if(marca == "FelipeLamparas"){
+                    porcentaje = -10
+                     }else{
+                    porcentaje = -5
+                    }
+                
+            }
+            break;
+
+            case 2:
+            case 1:
+            case 0:
+            porcentaje = 0
+            break;
+
+            default:
+                porcentaje = -50
+        
+        }
+
+        total = precioBruto + precioBruto * porcentaje/100; //105
+
+        switch(marca){
+            case "ArgentinaLuz":
+            case "FelipeLamparas":
+            case "JeLuz":
+            case "HazIluminacion":
+            case "Osram":
+                if(total > 120){
+                    porcentaje = 10
+                }else{
+                    porcentaje = 0
+                }
+                
+            }
+            iibb  = total * porcentaje /100;
+            iibb  = iibb.toFixed(2); 
+            total = total + total * porcentaje/100;
+            mensaje = "Usted pago " + total + " de IIBB, siendo " + iibb + " el impuesto que pago" ;
+        
+            console.log(mensaje);
+     
+
+    }
