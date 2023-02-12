@@ -21,12 +21,12 @@ function CalcularPrecio ()
     let porcentaje;
     let marca;
     let precioBruto;
+    let iibb;
     let total;
     let mensaje; 
-    let iibb;
 
-    precio           = 35;
     cantidadLamparas = parseInt(document.getElementById("txtIdCantidad").value);
+    precio           = 35;
     marca            = document.getElementById("Marca").value;
     porcentaje       = 0;
     precioBruto      = cantidadLamparas * precio ;
@@ -79,9 +79,11 @@ function CalcularPrecio ()
     }
 
     iibb  = total * porcentaje /100;
-    total = total + total * porcentaje/100;
     iibb  = iibb.toFixed(2); 
+    total = total + total * porcentaje/100;
     mensaje = "Usted pago " + total + " de IIBB, siendo " + iibb + " el impuesto que pago" ;
+
     console.log(mensaje);
+
 }   
     
