@@ -96,7 +96,7 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 
 //  TODO SWITCH
 
- function CalcularPrecio () {
+/*  function CalcularPrecio () {
 
     let cantidadLamparas;
     let precio;
@@ -173,4 +173,104 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
     console.log(mensaje);
 
 
- }
+ } */
+
+//  SWITCH (las marcas), IF(cantidad)
+    
+ function CalcularPrecio (){
+    let cantidadLamparas;
+    let precio;
+    let porcentaje;
+    let marca;
+    let precioBruto;
+    let iibb;
+    let total;
+    let mensaje; 
+
+    cantidadLamparas = parseInt(document.getElementById("txtIdCantidad").value);
+    precio           = 35;
+    marca            = document.getElementById("Marca").value;
+    porcentaje       = 0;
+    precioBruto      = cantidadLamparas * precio ;
+     
+    switch (marca) {
+        case "ArgentinaLuz":
+            if (cantidadLamparas > 5) {
+                porcentaje = -50
+            }else{
+                if(cantidadLamparas == 5){
+                    porcentaje = -30
+                }else{
+                    if(cantidadLamparas == 4){
+                        porcentaje = -25
+                    }else{
+                        if(cantidadLamparas == 3){
+                            porcentaje = -15
+                        }else{
+                            porcentaje = 0
+                        }
+                    }
+                }
+            }
+            
+        break;
+            case "FelipeLamparas":
+                if (cantidadLamparas > 5) {
+                    porcentaje = -50
+                }else{
+                    if(cantidadLamparas == 5){
+                        porcentaje = -40
+                    }else{
+                        if(cantidadLamparas == 4){
+                            porcentaje = -25
+                        }else{
+                            if(cantidadLamparas == 3){
+                                porcentaje = -10
+                            }else{
+                                porcentaje = 0
+                            }
+                        }
+                    }
+                }
+            break;
+            
+            default:
+                if (cantidadLamparas > 5) {
+                    porcentaje = -50
+                }else{
+                    if(cantidadLamparas == 5){
+                        porcentaje = -30
+                    }else{
+                        if(cantidadLamparas == 4){
+                            porcentaje = -20
+                        }else{
+                            if(cantidadLamparas == 3){
+                                porcentaje = -15
+                            }else{
+                                porcentaje = 0
+                            }
+                        }
+                    }
+                }
+            
+    }
+    total = precioBruto + precioBruto * porcentaje/100; //105
+
+    switch(total){
+        case total:
+            if(total > 120){
+                porcentaje = 10
+            }else{
+                porcentaje = 0
+            }
+            
+        }
+        iibb  = total * porcentaje /100;
+        iibb  = iibb.toFixed(2); 
+        total = total + total * porcentaje/100;
+        mensaje = "Usted pago " + total + " de IIBB, siendo " + iibb + " el impuesto que pago" ;
+    
+        console.log(mensaje);
+    }
+
+ 
