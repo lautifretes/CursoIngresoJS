@@ -16,80 +16,72 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
-
+    let cantidadLamparas;
     let precio;
-    let cantidad;
-    let descuento;
-    let total;
-    let precioTotal;
+    let porcentaje;
     let marca;
-     // let precioBruto;
-    let precioFinal;
+    let precioBruto;
+    let total;
+    let mensaje; 
+    let iibb;
 
+    precio           = 35;
+    cantidadLamparas = parseInt(document.getElementById("txtIdCantidad").value);
+    marca            = document.getElementById("Marca").value;
+    porcentaje       = 0;
+    precioBruto      = cantidadLamparas * precio ;
     
-    marca       = document.getElementById("Marca").value
-    precio      = 35
-    cantidad    = parseInt(document.getElementById("txtIdCantidad").value);
     
-    descuento   = 0.50
-    total       = precio * cantidad   
-    precioTotal = total * descuento
-    
-                // EJERCICIO A.
 
-    if (cantidad > 5) {
-        
-        document.getElementById("txtIdprecioDescuento").value = "el precio con descuento es " + precioTotal
-        
-    }else {
-        
-        document.getElementById("txtIdprecioDescuento").value = "el precio es " + total
+    if(cantidadLamparas > 5){
+        porcentaje = -50        
     }
-                //  EJERCICIO B.
-
-    if (cantidad == 5) {
-        if (marca == "ArgentinaLuz")
-        precioTotal = total - total * 0.40
-        document.getElementById("txtIdprecioDescuento").value = "el precio con descuento es " + precioTotal
-    
-    }else if (marca != "ArgentinaLuz") {
-        precioTotal = total - total * 0.30
-        document.getElementById("txtIdprecioDescuento").value = "el precio con descuento es " + precioTotal
+    else{
+        if (cantidadLamparas == 5) {
+            if (marca == "ArgentinaLuz") {
+                porcentaje = -40
+            } else {
+                porcentaje = -30
+                
+            }
+        }else{
+            if (cantidadLamparas == 4) {
+                if(marca == "ArgentinaLuz" || marca == "FelipeLamparas"){
+                    porcentaje = -25
+                }else{
+                    porcentaje = -20
+                }
+                
+            }else{
+                if (cantidadLamparas == 3) {
+                    if(marca ==  "ArgentinaLuz"){
+                        porcentaje = -15
+                    }else{
+                        if(marca == "FelipeLamparas"){
+                            porcentaje = -10
+                        }else{
+                            porcentaje = -5
+                        }
+                    }
+                }else{
+                    porcentaje = 0
+                }
+            }
+        }
+       
     }
-                //  EJERCICIO C.
-
-     if (cantidad == 4 && marca == ("ArgentinaLuz" && "FelipeLamparas")){
-        precioTotal = total - total * 0.25
-        document.getElementById("txtIdprecioDescuento").value = "el precio con descuento es " + precioTotal
-        
+    total = precioBruto + precioBruto * porcentaje/100;
+    
+    if(total > 120){
+        porcentaje = 10;
     }else{
-        cantidad == 4 && marca != ("ArgentinaLuz" && "FelipeLamparas")
-        precioTotal = total - total * 0.20
-        document.getElementById("txtIdprecioDescuento").value = "el precio con descuento es " + precioTotal
+        porcentaje = 0;
     }
-                //  EJERCICIO  D.
 
-    /*    if (cantidad == 3 && marca == "ArgentinaLuz") {
-        precioTotal = total - total * 0.15
-        document.getElementById("txtIdprecioDescuento").value = "el precio con descuento es " + precioTotal
-
-    } else if (cantidad == 3 && marca == "FelipeLamparas") {
-        precioTotal = total - total * 0.10
-        document.getElementById("txtIdprecioDescuento").value = "el precio con descuento es " + precioTotal
-
-    }else{
-        marca != "ArgentinaLuz" + "FelipeLamparas"
-        precioTotal = total - total *0.05
-        document.getElementById("txtIdprecioDescuento").value = "el precio con descuento es " + precioTotal
-
-    } */
-                // EJERCICIO  E.
-
-  /*   if (precioTotal > 120) {
-        precioBruto = 
-        precioFinal = precioTotal + precioTotal * 
-        document.getElementById("txtIdprecioDescuento").value = " IIBB Usted pago " + precioFinal + " siendo " + el impuesto que se pagó. " + precioTotal
-
-    } */
-
-}
+    iibb  = total * porcentaje /100;
+    total = total + total * porcentaje/100;
+    iibb  = iibb.toFixed(2); 
+    mensaje = "Usted pago " + total + " de IIBB, siendo " + iibb + " el impuesto que pago" ;
+    console.log(mensaje);
+}   
+    

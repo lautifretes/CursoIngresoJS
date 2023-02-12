@@ -73,24 +73,19 @@ function mostrar()
 	
 	if (velocidad > 120) {
 		mensaje = velocidad + "km/h eso no se hace";
-		// alert(mensaje);
 		
 	}else if (velocidad > 100){
 		mensaje = velocidad + "km/h ahi de la ley";
-		// alert(mensaje);
 
 	}else if (velocidad  > 80 ) {
 		mensaje = velocidad + "km/h buen ritmo";
-		 //alert(mensaje);
 			 
 	
 	}else if (velocidad > 60){
 		mensaje = velocidad + "km/h lento";
-		// alert(mensaje);
 			 
 	}else{
 		mensaje = velocidad + "km/h muy lento";
-		// alert(mensaje);
 			 
 	}
 	alert(mensaje);
