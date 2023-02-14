@@ -12,8 +12,8 @@ function mostrar()
 	let mensaje;
 	
 	while(isNaN(numeroIngresado) || numeroIngresado == -1 || numeroIngresado > 10){
-		mensaje = "el n "+ numeroIngresado+ " no es valido"
-		alert(mensaje)
+		mensaje = "el n "+ numeroIngresado+ " no es valido";
+		alert(mensaje);
 		numeroIngresado = prompt("ingrese un número entre 0 y 10.");
 		parseInt(numeroIngresado);
 		
