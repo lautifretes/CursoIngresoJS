@@ -36,8 +36,7 @@ function mostrar()
 			case "Mar del plata":
 				porcentaje = -20
 				break;
-			case "Cataratas":
-			case "Cordoba":
+			default:
 				porcentaje = -10
 		}
 	}else if (estacionDelAño == "Verano"){
@@ -49,19 +48,16 @@ function mostrar()
 			case "Mar del plata":
 				porcentaje = 20
 				break;
-			case "Cataratas":
-			case "Cordoba":
+			default:
 				porcentaje = 10
 		}
 	}else {
 		switch (localidad) {
-			case "Bariloche":
-			case "Mar del plata":
-			case "Cataratas":
-				porcentaje = 10
-				break;
 			case "Cordoba":
 				porcentaje = 0
+				break;
+			default:
+				porcentaje = 10
 		}
 	}
 	

@@ -20,17 +20,17 @@ function mostrar()
 		case "Enero":
 			mensaje = "que comiences bien el año!!!"
 			break;
-			case "Marzo":
-				mensaje = "a clases!!!."
-				break;
-				case "Julio":
-					mensaje = "se vienen las vacaciones!!!"
-					break;
-					case "Diciembre":
-						mensaje = "Felices fiesta!!!."
-						break;
-						default:
-							mensaje = "mes aburrido" 
+		case "Marzo":
+			mensaje = "a clases!!!."
+			break;
+		case "Julio":
+			mensaje = "se vienen las vacaciones!!!"
+			break;
+		case "Diciembre":
+			mensaje = "Felices fiesta!!!."
+			break;
+		default:
+			mensaje = "mes aburrido" 
 	}
 	alert(mensaje)
 

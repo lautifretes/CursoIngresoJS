@@ -18,7 +18,7 @@ function mostrar()
 			mensaje = "Hace FRIO, abrigate."
 			break;
 		case "Cataratas":
-			mensaje = "Hace CALOR, toma mucha agua."
+			mensaje = "Hace CALOR, toma agua."
 			break;
 		case "Mar del plata":
 			mensaje = "Depende la epoca del año"
