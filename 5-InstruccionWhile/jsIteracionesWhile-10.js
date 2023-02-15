@@ -13,14 +13,18 @@ hasta que el usuario quiera, mostrar:
 function mostrar()
 {
 	//declarar contadores y variables 
-	var respuesta;
-	var numeroIngresado;
-	var sumaNegativos=0;
+	let respuesta;
+	let numeroIngresado;
+	let sumaNegativos=0;
 
 	respuesta="si";
 
 	while(respuesta=="si")
 	{
+		numeroIngresado = parseInt(prompt("ingrese un numero"))
+		while(isNaN(numeroIngresado)){
+			
+		}
 		
 		respuesta=prompt("desea continuar?");
 	}//fin del while
