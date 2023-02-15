@@ -7,14 +7,14 @@ pedir un número entre 0 y 9 inclusive.*/
 function mostrar()
 {
 	let numeroIngresado;
-	numeroIngresado = prompt("ingrese un número entre 0 y 10.");
+	numeroIngresado = prompt("pedir un número entre 0 y 9 inclusive.");
 	parseInt(numeroIngresado);
 	let mensaje;
 	
-	while(isNaN(numeroIngresado) || numeroIngresado == -1 || numeroIngresado > 10){
+	while(isNaN(numeroIngresado) || numeroIngresado < -1 || numeroIngresado > 9){
 		mensaje = "el n "+ numeroIngresado+ " no es valido";
 		alert(mensaje);
-		numeroIngresado = prompt("ingrese un número entre 0 y 10.");
+		numeroIngresado = prompt("pedir un número entre 0 y 9 inclusive.");
 		parseInt(numeroIngresado);
 		
 	}
