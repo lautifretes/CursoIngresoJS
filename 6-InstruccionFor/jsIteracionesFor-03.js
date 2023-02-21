@@ -11,16 +11,13 @@ al presionar el botón pedir la cantidad de veces que quiero repetir el mensaje 
 
 function mostrar()
 {
-let mensaje;
-
-mensaje = "Hola UTN FRA"
+let repeticiones;
 	
-	repeticiones= prompt("ingrese cantidad de repeticiones")
-	repeticiones = parseInt(repeticiones)
+	repeticiones= prompt("ingrese cantidad de repeticiones");
+	repeticiones = parseInt(repeticiones);
 
 	for(let i = 0; i < repeticiones; i ++){
-
-		console.log(mensaje)
+		console.log("Hola UTN FRA");
 	}
 }
 
