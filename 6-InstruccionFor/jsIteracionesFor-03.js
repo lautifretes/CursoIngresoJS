@@ -1,8 +1,28 @@
+/* 
+
+		LAUTARO FRETES
+
+
+Enunciado:
+al presionar el botón pedir la cantidad de veces que quiero repetir el mensaje "Hola UTN FRA"
+
+*/
+
+
+
+
+
+
 function mostrar()
 {
 
-	var repetciones = prompt("ingrese el número de repeticiones");
-	alert("ok");
+	
+	
+	repeticiones= prompt("ingrese cantidad de repeticiones")
+	for(i = 0; i > repeticiones; i++){
+		console.log()
+	}
+}
 
 
-}//FIN DE LA FUNCIÓN
+//FIN DE LA FUNCIÓN

@@ -6,13 +6,44 @@ con números ASCENDENTE, desde el 1 al 10.*/
 function mostrar()
 {
 
-	let numero;
+	let edad;
+	let flagPrimero;
+	let nombre;
+	let mayorEdad;
+	let menorEdad;
+	let respuesta;
 
-	numero = 0
+
+	
+	nombre = prompt("ingrese su nombre")
+	respuesta = "si"
+	while (respuesta == "si" || respuesta == "s") {
+		edad = parseInt(prompt("ingrese su edad"));
+		while (isNaN(edad)){
+			edad = parseInt(prompt("error, "+edad+ " no es un numero"));
+		}
+		if(flagPrimero == true){
+			mayorEdad = edad;
+			menorEdad = edad;
+			flagPrimero = false;
+		}else{
+			if(edad > mayorEdad){
+				mayorEdad = edad;
+			}else{
+				menorEdad = edad;
+			}
+		}
+		respuesta = prompt("desea continuar? si/ no");
+	}
+	console.log("la mayor edad es "+mayorEdad);
+	console.log("la menor edad es "+ menorEdad);
+
+
+	/* numero = 0
 	while(numero < 10){
 		numero = numero +1
-		alert(numero);
-	}
+		alert(numero);|
+	} */
 }
 
 

@@ -21,11 +21,12 @@ function mostrar()
 		numeroIngresado = parseInt(prompt("ingrese un numero"));
 		
 		while (isNaN(numeroIngresado)) {
-			numeroIngresado = parseInt(prompt("ingrese un numero"));
+			numeroIngresado = parseInt(prompt("Error "+numeroIngresado+" no es un numero"));
 			
 		}
 		contador = contador + 1
 		acumulador = acumulador + numeroIngresado
+		promedio = acumulador / contador
 		respuesta = prompt("Quiere seguir sumando? si/no")
 		
 	}
@@ -33,7 +34,7 @@ function mostrar()
 
 
 	document.getElementById("txtIdSuma").value = acumulador;
-	document.getElementById("txtIdPromedio").value = contador;
+	document.getElementById("txtIdPromedio").value = promedio;
 	
 
 }//FIN DE LA FUNCIÓN
