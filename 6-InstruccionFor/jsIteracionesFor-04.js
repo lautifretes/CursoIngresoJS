@@ -9,11 +9,17 @@ al presionar el botón repetir hasta que utilizamos 'BREAK'.
 
 function mostrar()
 {
-	for(i=0; i > 10; i++){
-		console.log(i)
+	let repetir;
+
+	for(i=0; i < 10; i++){
+		repetir = prompt("para cortar ingrese 'break' ");
+		if(repetir == "break"){
+			break;
+		}
+		
 
 	}
-	alert("ok");
+	
 
 
 
