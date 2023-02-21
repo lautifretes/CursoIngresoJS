@@ -7,11 +7,6 @@ al presionar el botón repetir el pedido de número hasta que ingresemos el 9.
 
 */
 
-
-
-
-
-
 function mostrar()
 {
 	let repeticiones;
@@ -23,8 +18,5 @@ function mostrar()
 			break;
 		}
 	}
-	
-
-
 
 }//FIN DE LA FUNCIÓN
