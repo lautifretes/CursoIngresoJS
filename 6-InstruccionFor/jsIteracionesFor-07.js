@@ -17,7 +17,7 @@ function mostrar(){
 
 	console.log("El numero ingresado es :"+numeroIngresado);
 	for(i=1; i <= numeroIngresado; i ++){
-		if(numeroIngresado % i == 0){
+		if(i%numeroIngresado == 0){
 			console.log("divisro "+ i);
 			cantidadDivisor = cantidadDivisor + 1
 		}
