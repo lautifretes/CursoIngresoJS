@@ -7,14 +7,12 @@ function mostrar()
 	let  respuesta;
 	let  sumaPositivos;
 	let  multiplicacionNegativos;
-	let  acumulador;
 	let  numeroIngresado;
-	let acumuladorNegativo;
+	let  acumuladorNegativo;
 
 	contador = 0;
 	sumaPositivos = 0;
 	multiplicacionNegativos = 0;
-	acumulador = 0;
 	acumuladorNegativo = 0;
 	respuesta = 'si';
 
@@ -26,18 +24,16 @@ function mostrar()
 			
 		}
 		if(numeroIngresado >-1){
-			numeroIngresado = acumulador
+			sumaPositivos = sumaPositivos + numeroIngresado;
 		}else{
-			numeroIngresado = acumuladorNegativo
+			acumuladorNegativo= acumuladorNegativo + numeroIngresado;
+			multiplicacionNegativos = acumuladorNegativo * numeroIngresado;
 		}
-
 		contador = contador + 1
-		acumulador = acumulador + numeroIngresado
-		multiplicacionNegativos = acumuladorNegativo * numeroIngresado
 		respuesta = prompt("Quiere seguir sumando? si/no")
 		
 	}
-
+	
 
 	document.getElementById("txtIdSuma").value = sumaPositivos;
 	document.getElementById("txtIdProducto").value = multiplicacionNegativos;
