@@ -17,7 +17,7 @@ con números DESCENDENTES, desde el 10 al 1.*/
 
 // 2 bis: Ingresar 5 números, y determinar la cantidad de números que son mayores que 10 y menores 20 (inclusive en ambos casos)
 
-function mostrar(){
+/* function mostrar(){
 	let numeroIngresado;
 	let contador;
 	let mayorQueDiez;
@@ -38,3 +38,36 @@ function mostrar(){
 	console.log("hay "+mayorQueDiez+" numeros mayores que 10 y menores que 20");
 
 }
+ */
+
+
+// 2 bis bis: Ingresar numeros hasta que el usuario quiera. Determinar la cantidad de números que son mayores que 10 y menores 20 (inclusive en ambos casos). También el promedio de los números que cumplen la condición anterior.
+
+function mostrar(){
+	let numeroIngresado;
+	let mayorQueDiez;
+	let menorQueVeinte;
+	let respuesta;
+
+	
+	menorQueVeinte = 0;
+	mayorQueDiez = 0;
+	respuesta = "si";
+
+	while(respuesta == "si" || respuesta == "s"){
+		numeroIngresado = parseInt(prompt("ingrese un numero"));
+		while(isNaN(numeroIngresado) || numeroIngresado > 1000 ){
+			numeroIngresado = parseInt(prompt(numeroIngresado+"no es valido"))
+		}
+		if(numeroIngresado > 9){
+			mayorQueDiez = mayorQueDiez + 1;
+			}
+		if(numeroIngresado < 20 ){
+				menorQueVeinte = menorQueVeinte + 1
+			}
+		respuesta = prompt("desea ingresar mas numeros? si/no")
+	}
+	console.log("hay "+ mayorQueDiez +" numeros mayor o iguales que 10 y menores que 20");
+	console.log("hay "+ menorQueVeinte+" numeros menores o iguales que 20");
+}
+
