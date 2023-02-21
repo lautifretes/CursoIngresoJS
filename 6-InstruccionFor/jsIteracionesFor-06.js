@@ -7,9 +7,9 @@ al presionar el botón pedir un número. mostrar los numeros pares desde el 1 al
 */
 
 
+// CON IF
 
-
-function mostrar()
+/* function mostrar()
 {
 	let numeroIngresado;
 	let numeroPares;
@@ -28,10 +28,10 @@ function mostrar()
 	}
 	console.log("numeros pares encontrados :"+numeroPares)
 
-}//FIN DE LA FUNCIÓN
+}*///FIN DE LA FUNCIÓN
 
-
-/* function mostrar(){
+// SIN IF 
+function mostrar(){
 	let numeroIngresado;
 	let numeroPares;
 
@@ -44,4 +44,4 @@ function mostrar()
 	}
 	console.log("numeros pares encontrados :"+numeroPares)
 
-} */
+}
