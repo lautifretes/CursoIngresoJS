@@ -48,8 +48,13 @@ function mostrar(){
 	let mayorQueDiez;
 	let menorQueVeinte;
 	let respuesta;
+	let acumulador;
+	let contador;
+	let promedio;
 
-	
+	promedio = 0;
+	contador = 0;
+	acumulador = 0;
 	menorQueVeinte = 0;
 	mayorQueDiez = 0;
 	respuesta = "si";
@@ -65,9 +70,15 @@ function mostrar(){
 		if(numeroIngresado < 20 ){
 				menorQueVeinte = menorQueVeinte + 1
 			}
+			contador = contador + 1;
+			acumulador = acumulador + numeroIngresado;
 		respuesta = prompt("desea ingresar mas numeros? si/no")
 	}
+	promedio = acumulador / contador;
+
+	
 	console.log("hay "+ mayorQueDiez +" numeros mayor o iguales que 10 y menores que 20");
 	console.log("hay "+ menorQueVeinte+" numeros menores o iguales que 20");
+	console.log("el promedio es "+promedio);
 }
 
