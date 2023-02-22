@@ -48,7 +48,7 @@ function mostrar(){
 	acumuladorVarones = 0;
 	flagNotaMasBaja = true;
 	acumuladorDeNotas = 0;
-	alumnos = 4;
+	alumnos = 7;
 	
 	for(let i = 0; i < alumnos; i ++){
 		notas = parseInt(prompt("ingresar nota entre 0 y 10"));
