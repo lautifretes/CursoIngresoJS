@@ -34,30 +34,69 @@ d) La cantidad de alumnos desaprobados (nota < 4) */
 function mostrar(){
 	let notas;
 	let sexo;
-	let contador;
+	let alumnos;
 	let promedio;
-	let notaBaja;
-	let contadorNotas;
-
-	contadorNotas = 0
-
-	for(contador = 0; contador < 7 ; contador ++){
-		notas = parseInt(prompt("ingresar nota"));
-		sexo = prompt("ingrese sexo : 'f' , 'm' , 'b' ");
-		while(isNaN(notas) || notas < 0 || notas > 10){
-			notas = parseInt(prompt("error, ingrese una nota"));
+	let acumuladorDeNotas;
+	let flagNotaMasBaja;
+	let notaMasBaja;
+	let sexoNotaMasBaja;
+	let acumuladorVarones;
+	let alumnosDesaprobados;
+	
+	
+	alumnosDesaprobados = 0;
+	acumuladorVarones = 0;
+	flagNotaMasBaja = true;
+	acumuladorDeNotas = 0;
+	alumnos = 4;
+	
+	for(let i = 0; i < alumnos; i ++){
+		notas = parseInt(prompt("ingresar nota entre 0 y 10"));
+		while(isNaN(notas) || notas < 0 || notas >10){
+			notas = parseInt(prompt("Error, ingrese una nota entre 0 y 10"));
 		}
-		while(!isNaN(sexo)&& sexo != "f" && sexo != "m" && sexo != "b"){
-			sexo = prompt("error, ingrese sexo : 'f' , 'm' , 'b' ");
+		sexo = prompt("ingrese sexo del alumno : 'f', 'm', 'b'");
+		while(sexo != "f" && sexo != "m" && sexo != "b"){
+			sexo = prompt("ingrese sexo del alumno : 'f', 'm', 'b'");
+		}
+	//	B)
+		if (flagNotaMasBaja == true || notaMasBaja > notas){
+			notaMasBaja = notas;
+			sexoNotaMasBaja = sexo;
+			flagNotaMasBaja = false;
+		}
+	//	C)
+		switch (sexo) {
+			case "m":
+				if(notas > 5){
+					acumuladorVarones = acumuladorVarones + 1;
+				}
+				break;
+	//	D)
+			default:
+				if(notas < 4){
+					alumnosDesaprobados = alumnosDesaprobados + 1;
+				}
 		}
 		
-		contadorNotas =  + 1
+	}
+	
+	// 	A)
+	acumuladorDeNotas = acumuladorDeNotas + notas ;
+	promedio = acumuladorDeNotas / alumnos;
+	
+	// 	A)
+	console.log("total de notas "+ acumuladorDeNotas);
+	console.log("promedio es "+ promedio);
+	//	B)
+	console.log("la nota mas baja "+ notaMasBaja+" el sexo es "+sexoNotaMasBaja);
+	// 	C)
+	console.log(acumuladorVarones +" 'm' con nota mayor o igual a 6");
+	// 	D)
+	console.log("cantidad de alumnos desaprobados " + alumnosDesaprobados);
 
-		//console.log(notas)
-		//console.log(sexo)
-	} 
-	promedio = contadorNotas / contador
-	console.log(sexo)
-	console.log("notas"+notas)
-	console.log("el promedio es "+promedio);
 }
+
+
+
+
