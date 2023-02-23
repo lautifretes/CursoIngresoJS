@@ -78,11 +78,11 @@ function mostrar()
 		}
 		switch(estadoCivil){
 			case "viudo":
-				if(edad >21){
-					mayorEdadViudos = mayorEdadViudos + 1;
+				if(sexo == "m"){
+					contadorViudos = contadorViudos + 1;
 				}else{
-					if(sexo == "m"){
-						contadorViudos = contadorViudos + 1;
+					if(edad >21){
+						mayorEdadViudos = mayorEdadViudos + 1;
 					}else{
 						contadorViudos = contadorViudos;
 					}
