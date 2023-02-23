@@ -28,8 +28,6 @@ function mostrar()
 	let fabricante;
 	let flagAlcoholMasBarato;
 	let alcoholMasBarato;
-	let fabricanteMasBaratoDeAlcohol;
-	let unidadesMasBaratasDeAlcohol;
 	let contadorAlcohol;
 	let contadorJabon;
 	let contadorBarbijo;
@@ -38,8 +36,6 @@ function mostrar()
 	let acumuladorDeBarbijo;
 	let mayorUnidades;
 	let promedio;
-
-
 	let fabricanteMasCaroJabon;
 	let unidadesMasCaroJabon;
 	let jabonMasCaro;
@@ -47,8 +43,6 @@ function mostrar()
 	fabricanteMasCaroJabon = 0;
 	unidadesMasCaroJabon = 0;
 	jabonMasCaro = 0;
-
-	
 	contadorJabon = 0;
 	contadorBarbijo = 0;
 	contadorAlcohol = 0;
