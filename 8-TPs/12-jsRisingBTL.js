@@ -13,7 +13,6 @@ F.	Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para
  */
 function ComenzarIngreso () 
 {
- 	//definicion de variables
  	let edadIngresada;
  	let sexoIngresado;
  	let estadoCivilIngresado;
@@ -21,7 +20,6 @@ function ComenzarIngreso ()
 	let numeroDeLegajo;
 	let nacionalidad;
 
-	
 	edadIngresada = parseInt(prompt("ingrese la edad entre 18 y 90"));
 	while(isNaN(edadIngresada) || edadIngresada < 18 || edadIngresada >90){
 		edadIngresada = parseInt(prompt("ingrese la edad entre 18 y 90"));
@@ -57,5 +55,4 @@ function ComenzarIngreso ()
 		nacionalidad = prompt("ingrese las letras en mayuscula 'A','E','N' ")
 	}
 	document.getElementById("txtIdNacionalidad").value = nacionalidad; 
-
 }
