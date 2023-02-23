@@ -1,4 +1,10 @@
-/* Enunciado:
+/*
+
+		LAUTARO FRETES
+
+
+
+Enunciado:
 Bienvenidos.
 En el ingreso a un viaje en avión nos solicitan nombre, nacionalidad , edad, sexo("f" o "m") y estado civil("soltero", "casado" o "viudo")y temperatura corporal.
 a) la Nacionalidad de la persona con mas temperatura.
@@ -6,11 +12,6 @@ b) Cuantos mayores de edad( más de 17) estan solteros
 c) La cantidad de Mujeres que hay solteras o viudas.
 d) cuantas personas de la tercera edad( mas de 60 años) , tienen mas de 38 de temperatura
 e) El promedio de edad entre las mujeres casadas. */
-
-
-
-
-
 
 function mostrar()
 {
@@ -22,33 +23,26 @@ function mostrar()
 	let mayorTemperatura;
 	let flagMayorTemperatura;
 	let respuesta;
-	let nombreConMasTemperatura;
-	let mayorEdadViudos;
-	let contadorViudos;
-	let contadorSolteros;
 	let contadorMasculinos;
 	let contadorTerceraEdad;
 	let terceraEdad;
 	let promedio;
-	let acumuladorDeEdad;
-
-
-
 	let nacionalidad;
-	let nacionalidadConMasTemperatura;
+	let nacionalidadMayorTemperatura;
 	let contadorMayorEdadSolteros;
+	let contadorMujeresSolteras;
+	let contadorMujeresViudas;
+	let contadorMujeresCasadas;
+	let acumuladorMujeresCasadas;
 	
+	contadorMujeresCasadas = 0;
+	acumuladorMujeresCasadas = 0;
+	contadorMujeresViudas = 0;
+	contadorMujeresSolteras = 0;
 	contadorMayorEdadSolteros = 0;
-
-
-
 	flagMayorTemperatura = true;
 	contadorTerceraEdad = 0;
-	mayorEdadViudos = 0;
-	acumuladorDeEdad = 0;
-	contadorSolteros = 0;
 	contadorMasculinos = 0;
-	contadorViudos = 0;
 	mayorTemperatura = 0;
 	terceraEdad = 0;
 	respuesta = "si"
@@ -74,51 +68,50 @@ function mostrar()
 		while(isNaN(temperaturaCorporal) || temperaturaCorporal < 34 || temperaturaCorporal > 40){
 			temperaturaCorporal = parseFloat(prompt(temperaturaCorporal + " no es valido. Entre '34' y '40'"));
 		}
-		
 		nacionalidad = prompt("ingrese su nacionalidad");
-
+		while(! isNaN(nacionalidad)){
+			nacionalidad = prompt("ingrese su nacionalidad");
+		}
+		// 	A)
 		if(flagMayorTemperatura == true || mayorTemperatura < temperaturaCorporal){
 			mayorTemperatura = temperaturaCorporal;
-			nacionalidadConMasTemperatura = nacionalidad;
+			nacionalidadMayorTemperatura  = nacionalidad;
 			flagMayorTemperatura = false;
 		}
-
 		switch(estadoCivil){
 			case "viudo":
-				if(edad >21){
-					mayorEdadViudos = mayorEdadViudos + 1;
-				}else{
-					if(sexo == "m"){
-						contadorViudos = contadorViudos + 1;
-					}else{
-						contadorViudos = contadorViudos;
-					}
+				switch(sexo){
+					case "f":
+						contadorMujeresViudas = contadorMujeresViudas + 1;
+						break;
 				}
 				break;
 			case "soltero":
-				// 	E)
-				if(sexo == "m"){
-					acumuladorDeEdad = acumuladorDeEdad + edad;
-					contadorSolteros = contadorSolteros + 1;
-					promedio = acumuladorDeEdad / contadorSolteros;
-				}else {
-					if (edad > 17){
-						contadorMayorEdadSolteros = contadorMayorEdadSolteros +1
-					}
+				if(edad > 17){
+					contadorMayorEdadSolteros = contadorMayorEdadSolteros + 1;
+				}
+				switch(sexo){
+					case "f":
+						contadorMujeresSolteras = contadorMujeresSolteras + 1;
+						break;
 				}
 				break;
 			case "casado":
 				if(sexo == "f"){
-					contadorMujeresCasadas = contadorMujeresCasadas + 1
-					acumuladorMujeresCasadas = acumuladorMujeresCasadas + sexo;
+					acumuladorMujeresCasadas = acumuladorMujeresCasadas + edad;
+					contadorMujeresCasadas = contadorMujeresCasadas + 1;
+					promedio = acumuladorMujeresCasadas / contadorMujeresCasadas;
 				}
+				break;
 		}
 		if(edad > 60 && temperaturaCorporal > 38){
 			contadorTerceraEdad = contadorTerceraEdad + 1;
-		}else{
-			if(edad > 16 && estadoCivil == "soltero"){
-				contadorSolteros = contadorSolteros + 1
-			}
 		}
+		respuesta = prompt("¿Quiere seguir ingresando tripulantes? 'si' / 'no'");
 	}
+	document.write("nombre con mas temperatura es: "+nacionalidad + "<br>");
+	document.write("mayores de edad solteros: "+ contadorMayorEdadSolteros + "<br>");
+	document.write("cantidad de mujeres solteras: "+contadorMujeresSolteras + "<br>");
+	document.write("cantidad de mujeres viudas: "+contadorMujeresViudas + "<br>");
+	document.write("promedio de edad de mujeres casadas "+promedio + "<br>");
 }
