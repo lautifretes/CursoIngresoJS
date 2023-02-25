@@ -92,17 +92,17 @@ function mostrar() {
     respuesta = confirm("quiere seguir?")
   }
 
-  
-  if( acuArena > acuCal && acuArena > acuCemento){
-    mensaje =  "arena"
-  }else{
-    if(acuCal > acuCemento && acuCal > acuArena){
+
+  if (acuArena > acuCal && acuArena > acuCemento) {
+    mensaje = "arena"
+  } else {
+    if (acuCal > acuCemento && acuCal > acuArena) {
       mensaje = "cal"
-    }else{
+    } else {
       mensaje = "cemento"
     }
   }
-  if (cantBolsas >30) {
+  if (cantBolsas > 30) {
     descuento = -25;
   } else {
     if (cantBolsas > 10) {
@@ -118,7 +118,7 @@ function mostrar() {
 
   console.log("total a pagar sin descuento " + totalAPagarBruto);
   console.log("importe a pagar con descuento " + totalAPagarConDescuento);
-  console.log("el producto con mas cantidad de bolsas es: "+ mensaje);
+  console.log("el producto con mas cantidad de bolsas es: " + mensaje);
   console.log("el producto mas caro es: " + nombreProductoMasCaro);
 
 }
